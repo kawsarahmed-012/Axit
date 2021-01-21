@@ -25,11 +25,11 @@
           </button>
           <div class="collapse navbar-collapse" id="navmenu">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item"><a href="" class="nav-item-link">Features</a></li>
-              <li class="nav-item"><a href="" class="nav-item-link">Pricing</a></li>
-              <li class="nav-item"><a href="" class="nav-item-link">About</a></li>
-              <li class="nav-item"><a href="" class="nav-item-link">Reviews</a></li>
-              <li class="nav-item"><a href="" class="nav-item-link">Contact</a></li>
+              <li class="nav-item"><a href="#features" class="nav-item-link">Features</a></li>
+              <li class="nav-item"><a href="#pricing" class="nav-item-link">Pricing</a></li>
+              <li class="nav-item"><a href="#reviews" class="nav-item-link">Reviews</a></li>
+              <li class="nav-item"><a href="#about" class="nav-item-link">About</a></li>
+              <li class="nav-item"><a href="#contact" class="nav-item-link">Contact</a></li>
             </ul>
           </div>
         </nav>
@@ -90,15 +90,28 @@
       <div class="container">
         <div class="row">
           <div class="col-md-2">
-            <p class="box1">TAB 1</p>
-            <p class="box2">TAB 2</p>
-            <p class="box3">TAB 2</p>
+            <button onclick="opentab(event, 'tab-1')" class="tablinks" id="default">TAB 1</button>
+            <button onclick="opentab(event, 'tab-2')" class="tablinks">TAB 2</button>
+            <button onclick="opentab(event, 'tab-3')" class="tablinks">TAB 2</button>
           </div>
           <div class="col-md-6">
-            <h4>Tabs with soft transitioning effect</h4>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia molestias sed asperiores earum dignissimos, reiciendis vitae! Minima, quibusdam molestias voluptatem, iure deleniti voluptatibus eum magnam neque recusandae architecto, beatae perspiciatis?</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque, necessitatibus?</p>
-            <button>Download</button>
+            <div class="tabcontent" id="tab-1">
+              <h4>Tabs with soft transitioning effect 1</h4>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia molestias sed asperiores earum dignissimos, reiciendis vitae! Minima, quibusdam molestias voluptatem, iure deleniti voluptatibus eum magnam neque recusandae architecto, beatae perspiciatis?</p>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque, necessitatibus?</p>
+              <button>Download</button>
+            </div>
+            <div class="tabcontent" id="tab-2">
+              <h4>Tabs with soft transitioning effect 2</h4>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia mol quibusdam molestias voluptatem, iure deleniti voluptatibus eum magnam neque recusandae architecto, beatae perspiciatis?</p>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque, necessitatibus?</p>
+              <button>Download</button>
+            </div>
+            <div class="tabcontent" id="tab-3">
+              <h4>Tabs with soft transitioning effect 3</h4>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia molestias sed asperiores earum dignissimos, reiciendis vitae! Minima, quibusdam molestias voluptatem, iure deleniti voluptatibus eum magnam neque recusandae architecto, beatae perspiciatis?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque, necessitatibus?</p>
+              <button>Download</button>
+            </div>
           </div>
           <div class="col-md-4">
             <img class="img-fluid" src="./img/feature1.png" alt="">
@@ -154,7 +167,7 @@
     </div>
     <!-- Sublist section Ends here -->
     <!-- Awesome section Starts here -->
-    <section class="awesome container">
+    <section class="awesome container" id="features">
       <h1>why this is awesome?</h1>
       <div class="line"></div>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit voluptatibus illum vitae, repudiandae aspernatur nam.</p>
@@ -178,12 +191,12 @@
     </section>
     <!-- Awesome section Ends here -->
     <!-- Pricing section Starts here -->
-    <section class="pricing">
+    <section class="pricing" >
       <div class="container">
         <h1>pricing options</h1>
         <div class="line"></div>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil, aut!</p>
-        <div class="row">
+        <div class="row" id="pricing">
           <div class="col-md-4">
             <p>Basic</p>
             <p><img src="./img/slot1.png" class="img-fluid" alt=""></p>
@@ -225,7 +238,7 @@
     </section>
     <!-- Pricing section Ends here -->
     <!-- Review section Starts here -->
-    <section class="review container">
+    <section class="review container" id="reviews">
       <h1>what our customers are saying</h1>
       <div class="line"></div>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, tempore.</p>
@@ -258,7 +271,7 @@
     </section>
     <!-- Review section Ends here -->
     <!-- Extra section Starts here -->
-    <section class="extra">
+    <section class="extra" id="about">
       <div class="container">
         <h1>stylish axure design</h1>
         <div class="line"></div>
@@ -268,7 +281,7 @@
     </section>
     <!-- Extra section Ends here -->
     <!-- Contact section Start here -->
-    <div class="contact container">
+    <div class="contact container" id="contact">
       <h1>contact us</h1>
       <div class="line"></div>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, aliquam.</p>
@@ -301,7 +314,45 @@
       </div>
     </footer>
     <!-- Footer section Ends here -->
+    <!-- scroll top buttton -->
+    <button onclick="scrolltop()" id="topbtn"><i class="fas fa-chevron-up"></i></button>
     <!-- Bootstrap javscript link -->
     <script src="./js/bootstrap.bundle.js"></script>
+    <!-- top button working -->
+    <script>
+      // getting "top" button id
+      var topbtn = document.getElementById("topbtn");
+      // Defining when to show or hide the button
+      window.onscroll = function(){
+        //'body' for safari and 'documentElement' for other browsers
+        if ( document.documentElement.scrollTop > 600 || document.body.scrollTop > 600 ) { 
+          topbtn.style.display = 'block';
+        }
+        else {
+          topbtn.style.display = 'none';
+        }
+      }
+      // Definig the main function which will be executed if the button is pressed
+      function scrolltop() {
+        document.documentElement.scrollTop = 0; // For all browsers without safari
+        document.body.scrollTop = 0; // Only for safari
+      }
+      // Tabbing
+      function opentab(evt, tabno) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabno).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("default").click();
+    </script>
   </body>
 </html>
