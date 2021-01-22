@@ -121,6 +121,7 @@
     </div>
     <!-- Tab section ends here -->
     <!-- Sublist section Starts here -->
+    <!-- Sublist 1st part -->
     <div class="sublist-1">
       <div class="container">
         <div class="row">
@@ -150,6 +151,7 @@
         </div>
       </div>
     </div>
+    <!-- Sublist 2nd part -->
     <div class="sublist-2">
       <div class="container">
         <div class="row">
@@ -199,7 +201,7 @@
         <div class="row" id="pricing">
           <div class="col-md-4">
             <p>Basic</p>
-            <p><img src="./img/slot1.png" class="img-fluid" alt=""></p>
+            <p>$<span>0</span></p>
             <p><i>Free for Life</i></p>
             <p></p>
             <p>1 gb of space</p>
@@ -211,7 +213,7 @@
           </div>
           <div class="col-md-4">
             <p>Professional</p>
-            <p><img src="./img/slot2.png" class="img-fluid" alt=""></p>
+            <p>$<span>19</span></p>
             <p><i>Monthly Payment</i></p>
             <p>Our most popular</p>
             <p>5 gb of space</p>
@@ -223,7 +225,7 @@
           </div>
           <div class="col-md-4">
             <p>Basic</p>
-            <p><img src="./img/slot3.png" class="img-fluid" alt=""></p>
+            <p>$<span>70</span></p>
             <p><i>Monthly Payment</i></p>
             <p></p>
             <p>unlimited space</p>
@@ -318,8 +320,11 @@
     <button onclick="scrolltop()" id="topbtn"><i class="fas fa-chevron-up"></i></button>
     <!-- Bootstrap javscript link -->
     <script src="./js/bootstrap.bundle.js"></script>
-    <!-- top button working -->
+    <!-- Custom Javascript -->
     <script>
+      ////////////////////////////////////////////////////////////////////////////////
+      //Top Button 
+      ////////////////////////////////////////////////////////////////////////////////
       // getting "top" button id
       var topbtn = document.getElementById("topbtn");
       // Defining when to show or hide the button
@@ -337,7 +342,9 @@
         document.documentElement.scrollTop = 0; // For all browsers without safari
         document.body.scrollTop = 0; // Only for safari
       }
+      ////////////////////////////////////////////////////////////////////////////////
       // Tabbing
+      ////////////////////////////////////////////////////////////////////////////////
       function opentab(evt, tabno) {
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");

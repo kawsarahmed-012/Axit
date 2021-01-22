@@ -378,7 +378,15 @@ nav li a {
 }
 .pricing .col-md-4 p:nth-child(2) {
   background-color: #333333;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
   border: none;
+  color: white;
+  padding-block: 0 !important;
+}
+.pricing .col-md-4 p:nth-child(2) span {
+  font-size: 5rem;
 }
 .pricing .col-md-4 p:nth-child(3) {
   text-transform: initial;
