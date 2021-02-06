@@ -20,6 +20,10 @@ p {
   font-size: 0.85rem;
   color: #aaaaaa;
 }
+
+input:focus {
+  outline: none;
+}
 /*Global Section Css Ends Here*/
 /*Header Section Css Starts Here*/
 header {
@@ -47,7 +51,7 @@ nav li a {
 /* Banner Section Css Starts Here */
 .banner {
   background: url(../img/banner-bg.png) center no-repeat;
-  padding: 7em;
+  padding: 10vw 0;
   background-size: cover;
 }
 .banner .col-md-7 h1 {
@@ -160,7 +164,6 @@ nav li a {
 }
 .social i {
   font-size: 3rem;
-  /* margin-inline: 0.5em; */
   color: #c3c3c3;
 }
 /* Social Section Css Ends Here */
@@ -431,9 +434,6 @@ nav li a {
 .review .row {
   justify-content: space-between;
 }
-.review .col-md-4 {
-  width: 30%;
-}
 .review .col-md-4 p:nth-child(1) {
   background-color: #eeeeee;
   padding: 1.5rem 1rem;
@@ -591,3 +591,78 @@ footer p {
   background-color: #ff9b51;
 }
 /* Top Button Css Ends Here */
+
+
+@media (max-width: 1199px) {
+  .banner .col-md-5 div {
+    width: 80%;
+  }
+}
+@media (max-width: 991px) {
+  header ul li {
+    padding: 5px 0;
+  }
+  .banner .col-md-5 div {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .banner .col-md-5 div {
+    width: min(300px, 90%);
+  }
+  .social ul {
+    padding-left: 0;
+  }
+  .social i {
+    font-size: 2rem;
+  }
+  .tab .col-md-4 {
+    margin-top: 10vw;
+  }
+  .sublist-2 .row {
+    flex-direction: column-reverse;
+  }
+  .review .row {
+    padding: 10vw 0;
+  }
+  .review .col-md-4 + .col-md-4 {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 575px) {
+  .tab .col-md-2 {
+    display: flex;
+  }
+  .tab .col-md-2 > * {
+    margin: 5px;
+    width: min(100px, 30%);
+  }
+  .tab .col-md-2 > button:first-child {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.2rem;
+  }
+  .tab .col-md-2 > button:last-child {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0.2rem;
+  }
+  footer ul {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  footer li {
+    padding: 1rem 0;
+  }
+  .pricing {
+    padding: 2rem;
+  }
+  .pricing .row {
+    padding: 0;
+  }
+  .pricing .col-md-4 {
+    width: 80%;
+    margin: 10vh auto !important;
+  }
+}
